@@ -23,8 +23,9 @@
   - 수거업체의 분류 인력 최소화를 통한 인건비 절감 및  폐의류의 국내 재사용 및 재손질 비율 향상
 
 ## Solution
-  ### flow chart
-  ![image](https://user-images.githubusercontent.com/68943859/154847850-26704c5d-79ca-4448-b874-798f670f74cc.png)
+  ### User's flow
+  ![image](https://user-images.githubusercontent.com/68943859/154848023-8507f4d5-2081-483a-aa26-430b92e26220.png)
+
 
   ### 1) Color Detection Model
   ![image](https://user-images.githubusercontent.com/68943859/154847608-153d3448-2fdb-40c3-88aa-d114a43c6551.png)
