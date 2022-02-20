@@ -28,6 +28,7 @@
   ### 2) Stain Detection Model 
   ![image](https://user-images.githubusercontent.com/68943859/154847618-80bed69e-2b8f-4ac8-b7ae-eb9b922e1701.png)
 
-  ### 3) Textile Component Check 
-    ![image](https://user-images.githubusercontent.com/68943859/154847571-1e7002f6-5630-4615-bf97-36d700d11888.png)
+  ### 3) Textile Component Check
+  ![image](https://user-images.githubusercontent.com/68943859/154847673-2fb3d3ce-0257-4ddd-9520-9322ca462407.png)
+
   
