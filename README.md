@@ -35,4 +35,13 @@
   ### 3) Textile Component Check
   ![image](https://user-images.githubusercontent.com/68943859/154847673-2fb3d3ce-0257-4ddd-9520-9322ca462407.png)
 
+## Business Model 
+  - 기존 시장 문제점
+    - 폐의류 분류 기준의 비획일성으로 인한 비효율
+    - 소비자에게 환경에 대한 부채감 부여
+    - 대기업 ESG전략 수립 시 함께 협업하는 모든 업체들의 수행까지 추적/관리 어려움
+ - 전략
+    - 의류분야의 소규모 기업에서도 활용 가능한 탄소중립 B2B 시스템
   
+  ![image](https://user-images.githubusercontent.com/68943859/154848892-5ba87684-dc76-4984-b42e-79887e9d0d94.png)
+
