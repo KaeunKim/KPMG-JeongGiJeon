@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TexT_Tile: AI for net-zero</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,500,600">
+<style>
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, p {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 1em;
+}
+ul, ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+img {
+	max-width: 100%;
+
+	vertical-align: top;
+	border: none;
+}
+.wrapper {
+	max-width: 100%;
+	min-width: 340px;
+}
+.start {
+	/* height: 100vh; *//* jQuery에서 크기 조정이 가능합니다. */
+	height: 60em; /* 960px */
+	overflow: hidden;
+	text-align: center;
+	background: url(images/bg_start.jpg) no-repeat center center;
+	background-size: cover;
+}
+.start h1 {
+	display: inline-block;
+	margin-top: 5.75em; /* 92px */
+	width: 20em; /* 120px; */
+	font-size: 1em;
+}
+.start dt {
+	margin-top: 5em; /* 80px */
+	text-transform: uppercase;
+	font-family: "Oswald", sans-serif;
+	font-size: 1.75em;
+	font-weight: 600;
+	color: #002b41;
+}
+.start dd {
+	display: inline-block;
+	position: relative;
+	margin-top: 15px;
+	text-transform: uppercase;
+	font-family: "Oswald", sans-serif;
+	font-weight: 400;
+	color: #002b41;
+}
+.start dd::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: -46px;
+	top: 12px;
+	width: 40px;
+	height: 1px;
+	background-color: #ccd5d9;
+}
+.start dd::after {
+	content: "";
+	display: block;
+	position: absolute;
+	right: -46px;
+	top: 12px;
+	width: 40px;
+	height: 1px;
+	background-color: #ccd5d9;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	var winW, winH;
+
+	$(window).resize(function(){
+		winW=$(window).width();
+		winH=$(window).height();
+
+		if(winW > winH){
+			// console.log("landscape view!!");
+			$(".start").removeAttr("style");
+		}
+		else{
+			// console.log("portrait view!!");
+			$(".start").css({"height":winH});
+		}
+	});
+	$(window).trigger("resize");
+});
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="start">
+		<h1 id="logo"><a href="main_page.html"><img src="images/logo1.png" alt="logo"></a></h1>
+		<!-- <dl>
+			<dt>Design digital platforms</dt>
+			<dd>Designed for your needs</dd>
+		</dl> -->
+	</div>
+</div>
+</body>
+</html>

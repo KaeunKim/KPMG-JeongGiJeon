@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TexT_Tile: AI for net-zero</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="style.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<style>
+  button {
+    margin-left: 30px;
+    margin-right: 100%-200px;
+    border-radius: 5px;
+    border: 1px #cacaca;
+    color: #fff;
+    background-color: #cacaca;
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+  }
+  #output-color{
+    position: relative;
+    height: 100px;
+    width: 40%;
+     box-shadow: 0 0 20px rgba(0,139,253,0.25);
+    border: 2px solid #ffffff;
+    margin-top: 2em;
+    display: grid;
+    margin-bottom: 15px;
+    place-items: center;
+}
+
+#output-color span{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+input[type="text"]{
+    width: 40%;
+    background-color: transparent;
+
+    box-shadow: 0 0 20px rgba(0,139,253,0.65);
+    font-size: 1.3em;
+    padding: 0.3em 0;
+
+    margin: 0;
+    border-radius: 5px;
+    color: #000000;
+    text-align: center;
+}
+input[type="text"]::-moz-selection{
+    background: transparent;
+}
+input[type="text"]::selection{
+    background: transparent;
+}
+
+#recycle{
+    background-color: #205e94;
+    color: #ffffff;
+}
+#discard{
+
+    background-color: #d23332;
+
+    color: #ffffff;
+}
+#result{margin-left: 30px;}
+  </style>
+<script>
+$(function(){
+	$(".tab").click(function(e){
+		e.preventDefault();
+		$("#mobile").addClass("active");
+		$(".dim").addClass("active");
+	});
+	$(".dim").click(function(){
+		$("#mobile").removeClass("active");
+		$(".dim").removeClass("active");
+	});
+	$("#mobile > ul > li").click(function(e){
+		e.preventDefault();
+		/*
+		$("#mobile > ul > li").removeClass("active");
+		$(this).addClass("active");
+		$("#mobile ul ul").hide();
+		$(this).children("ul").show();
+		*/
+
+		if($(this).hasClass("active") == false){
+			$("#mobile > ul > li").removeClass("active");
+			$(this).addClass("active");
+			$("#mobile ul ul").slideUp(300);
+			$(this).children("ul").slideDown(300);
+		}
+		else{
+			$(this).removeClass("active");
+			$(this).children("ul").slideUp(300);
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+	<header id="header">
+		<nav id="desktop">
+      <ul>
+        <li><a href="ai_classification.html">AI 의류 분류</a></li>
+        <li><a href="my_page.html">내 탄소발자국</a></li>
+        <li><a href="setting.html">설정</a></li>
+      </ul>
+    </nav>
+    <nav id="mobile">
+      <ul>
+        <li>
+          <a href="ai_classification.html">AI 의류 분류</a>
+          <ul>
+            <li><a href="upload_images.html">촬영</a>
+            <li><a href="upload_images.html">이미지 업로드</a>
+          </ul>
+        </li>
+        <li>
+          <a href="my_page.html">내 탄소발자국</a>
+          <ul>
+            <li><a href="">오늘의 탄소 발자국</a>
+            <li><a href="">전체 탄소 발자국</a>
+            <li><a href="">내 탄소 절감량</a>
+          </ul>
+        </li>
+        <li>
+          <a href="setting.html">설정</a>
+          <ul>
+            <li><a href="">개인정보</a>
+            <li><a href="">업체정보</a>
+            <li><a href="">문의사항</a>
+          </ul>
+        </li>
+      </ul>
+		</nav>
+		<a href="" class="tab">tab</a>
+	</header>
+	<div class="dim"></div>
+</div>
+<div class="informations">
+<button id="btn1">구분</button><br>
+<br><br>
+<div id="result">분석 결과 텍스트</div>
+<br><br>
+<button id="btn2">소재</button><br>
+<br><br>
+<div id="result"><ul>
+  <li>성분 1 xx% </li>
+  <li>성분 2 xx%</li>
+  <li>성분 3 xx%</li>
+</ul></div>
+<br><br>
+<button id="btn3">오염도</button><br>
+<br><br>
+<div id="result">색깔 %%</div>
+<br><br>
+<button id="btn4">색상</button><br>
+<div id="result"><div id="output-color">
+   <span></span>
+</div>
+ <input type="text" id="output" readonly>
+</div>
+<br><br>
+<div class="use_or_discard"></div>
+
+ <div class="btns">
+     <button id="recycle">재활용</button>
+     <button id="discard">폐기</button>
+ </div>
+</div>
+
+
+</body>
+</html>
